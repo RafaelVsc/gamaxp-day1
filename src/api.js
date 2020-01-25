@@ -5,6 +5,7 @@ const MODE = 'cors';
 
 let isFetchingRandomJoke = false;
 let isSearchingJokes = false;
+let isFetchingRandomJokeFromCategory = false;
 
 async function getRandomJoke() {
   isFetchingRandomJoke = true;
@@ -45,3 +46,22 @@ async function searchJokes(text) {
     isSearchingJokes = false;
   }
 }
+
+async function getRandomJokeFromCategory(category) {
+  isFetchingRandomJokeFromCategory = true;
+
+  try {
+    const response = await fetch(`${BASE_URL}random?category=${category}`, {
+      method: METHOD,
+      mode: MODE,
+      headers: {
+        'Content-Type': CONTENT_TYPE
+      }
+    });
+
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+  } finally {
+    isFetchingRandomJokeFromCategory = false;
+  }
