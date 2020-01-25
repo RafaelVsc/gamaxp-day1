@@ -1,5 +1,8 @@
 .container  {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .categories-menu {
@@ -18,4 +21,26 @@
     font-weight: 600;
     cursor: pointer;
     list-style: none;
+}
+
+.card {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    margin: 20px;
+    -webkit-box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.75);
+}
+
+.card p {
+    padding: 10px;
+    font-size: 16px;
+    color: #f60;
+    font-weight: 600;
 }
