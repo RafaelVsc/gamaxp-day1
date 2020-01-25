@@ -27,6 +27,16 @@ fetch(URL_FETCH_CATEGORIES, {
     console.error(error)
 })
 
+async function getJoke(category) {
+  const joke = await getRandomJokeFromCategory(category);
+
+  let imgNode = document.querySelector('#avatar');
+  let jokeParagraph = document.querySelector('#joke');
+
+  imgNode.src = joke.icon_url;
+  jokeParagraph.innerHTML = joke.value
+}
+
 // Busca piada randômica
 async function getRandomJoke() {
   isFetchingRandomJoke = true;
