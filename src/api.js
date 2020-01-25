@@ -1,5 +1,14 @@
 const URL_FETCH_CATEGORIES = 'https://api.chucknorris.io/jokes/categories';
 
+const BASE_URL = 'https://api.chucknorris.io/jokes/';
+const METHOD = 'GET';
+const CONTENT_TYPE = 'application/json';
+const MODE = 'cors';
+
+let isFetchingRandomJoke = false;
+let isSearchingJokes = false;
+let isFetchingRandomJokeFromCategory = false;
+
 fetch(URL_FETCH_CATEGORIES, {
     method: 'get'
 })
@@ -18,16 +27,7 @@ fetch(URL_FETCH_CATEGORIES, {
     console.error(error)
 })
 
-
-const BASE_URL = 'https://api.chucknorris.io/jokes/';
-const METHOD = 'GET';
-const CONTENT_TYPE = 'application/json';
-const MODE = 'cors';
-
-let isFetchingRandomJoke = false;
-let isSearchingJokes = false;
-let isFetchingRandomJokeFromCategory = false;
-
+// Busca piada randômica
 async function getRandomJoke() {
   isFetchingRandomJoke = true;
 
@@ -48,6 +48,7 @@ async function getRandomJoke() {
   }
 }
 
+// Busca piadas através de um texto
 async function searchJokes(text) {
   isSearchingJokes = true;
 
@@ -68,6 +69,7 @@ async function searchJokes(text) {
   }
 }
 
+// Busca piada randômica a pratir de uma categoria
 async function getRandomJokeFromCategory(category) {
   isFetchingRandomJokeFromCategory = true;
 
