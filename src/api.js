@@ -65,3 +65,4 @@ async function getRandomJokeFromCategory(category) {
   } finally {
     isFetchingRandomJokeFromCategory = false;
   }
+}
