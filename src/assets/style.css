@@ -1,3 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #dddd;
+}
+
+span, p {
+  font-family: 'Bangers', cursive;
+  font-weight: normal;
+}
+
+ul, li {
+  font-family: 'Sigmar One', cursive;
+}
+
 .container  {
   display: flex;
   flex-direction: column;
@@ -9,6 +27,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
     background-color: #f60;
 }
 
@@ -17,10 +36,14 @@
     padding: 10px;
     border-radius: 4px;
     color: #ffffff;
-    margin: 10px 10px;
     font-weight: 600;
     cursor: pointer;
     list-style: none;
+}
+
+.categories-menu li:hover {
+  background-color: #fff;
+  color: #f60;
 }
 
 .card {
@@ -30,7 +53,8 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border: 1px solid #d2d2d2;
+    border: 1px solid;
+    background-color: #fff;
     border-radius: 4px;
     margin: 20px;
     -webkit-box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.75);
