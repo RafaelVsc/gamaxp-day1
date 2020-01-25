@@ -1,5 +1,8 @@
 .container  {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .categories-menu {
@@ -9,13 +12,15 @@
     background-color: #f60;
 }
 
-.categories-menu a {
+.categories-menu li {
     flex: 1 200px 1fr;
     padding: 10px;
     border-radius: 4px;
     color: #ffffff;
     margin: 10px 10px;
     font-weight: 600;
+    cursor: pointer;
+    list-style: none;
 }
 
 .card {
