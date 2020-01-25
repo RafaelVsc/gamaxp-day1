@@ -5,13 +5,15 @@
 .categories-menu {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f60;
 }
 
 .categories-menu a {
     flex: 1 200px 1fr;
     padding: 10px;
-    border: 1px solid #ff6600;
     border-radius: 4px;
-    color: #f93398;
-    margin: 0 10px;
+    color: #ffffff;
+    margin: 10px 10px;
+    font-weight: 600;
 }
